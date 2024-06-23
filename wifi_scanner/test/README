@@ -1,0 +1,46 @@
+# ESP8266 WiFi Network Scanner
+
+This project is an ESP8266-based WiFi network scanner that uses the Arduino framework. The scanner searches for available WiFi networks and displays their SSIDs, signal strengths, and encryption types via the serial monitor. LEDs are used to indicate the scanning process and network status.
+
+## Hardware Required
+
+- ESP8266 Board (e.g., NodeMCU, Wemos D1 Mini)
+- 3 LEDs (Red, Green, Yellow)
+- 3 Resistors (220 ohm)
+- Breadboard and Jumper Wires
+
+## Circuit Diagram
+
+| Pin  | Component   |
+|------|-------------|
+| D2   | Green LED   |
+| D3   | Yellow LED  |
+| D4   | Red LED     |
+
+Connect the anodes of the LEDs to the respective pins (D2, D3, D4) through a 220 ohm resistor. Connect the cathodes of the LEDs to the ground.
+
+## Software Required
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [PlatformIO IDE](https://platformio.org/platformio-ide)
+- [ESP8266 Board Package](https://platformio.org/platforms/espressif8266)
+
+
+## Usage
+
+Once the code is uploaded and the serial monitor is open, you will see the ESP8266 scanning for available WiFi networks. The red LED will light up during the scanning process. If networks are found, the green LED will light up, and the network details will be printed to the serial monitor. If no networks are found, the yellow LED will light up.
+
+## Troubleshooting
+
+- **Driver Issues:** Ensure you have the correct drivers installed for your ESP8266 board.
+- **Board Selection:** Verify that the board selected in `platformio.ini` matches your actual hardware.
+- **Port Selection:** Make sure the correct COM port is selected for uploading the code.
+
+
+## project under RAMtronics
+
+- Inspired by examples from the Arduino and ESP8266 communities.
+
+## Project Image
+
+![Placeholder Image](path/to/your/image.png)
