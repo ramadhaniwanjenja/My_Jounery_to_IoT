@@ -1,10 +1,10 @@
-# **ESP8266 WiFi Network Scanner**
+# ESP8266 WiFi Network Scanner
 
 ![ESP8266 WiFi Network Scanner](https://media.geeksforgeeks.org/wp-content/uploads/20190927155217/webserver.png)
 
-This project implements an ESP8266-based WiFi network scanner using Arduino framework. It allows scanning for available WiFi networks, displaying their SSIDs, signal strengths, and encryption types via the serial monitor. LEDs are used to indicate the scanning process and current network status.
+This project implements an ESP8266-based WiFi network scanner using the Arduino framework. It allows scanning for available WiFi networks, displaying their SSIDs, signal strengths, and encryption types via the serial monitor. LEDs are used to indicate the scanning process and current network status.
 
-## **Table of Contents**
+## Table of Contents
 
 - [Hardware Required](#hardware-required)
 - [Circuit Diagram](#circuit-diagram)
@@ -15,14 +15,14 @@ This project implements an ESP8266-based WiFi network scanner using Arduino fram
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
-### **Hardware Required**
+## Hardware Required
 
 - ESP8266 Board (e.g., NodeMCU, Wemos D1 Mini)
 - 3 LEDs (Red, Green, Yellow)
 - 3 Resistors (220 ohm)
 - Breadboard and Jumper Wires
 
-#### **Circuit Diagram**
+## Circuit Diagram
 
 | Pin  | Component    |
 |------|--------------|
@@ -32,13 +32,13 @@ This project implements an ESP8266-based WiFi network scanner using Arduino fram
 
 Connect the anodes of the LEDs to the respective pins (D2, D3, D4) through a 220 ohm resistor. Connect the cathodes of the LEDs to the ground.
 
-##### **Software Required**
+## Software Required
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [PlatformIO IDE](https://platformio.org/platformio-ide)
 - [ESP8266 Board Package](https://platformio.org/platforms/espressif8266)
 
-###### Setup and Installation
+## Setup and Installation
 
 1. **Install PlatformIO in VSCode:**
    - Open VSCode.
@@ -64,20 +64,23 @@ Connect the anodes of the LEDs to the respective pins (D2, D3, D4) through a 220
    - Set the baud rate to `115200` to match the `Serial.begin(115200);` statement in your code.
    - You should see the ESP8266 scanning for available WiFi networks and displaying the results.
 
-####### **Usage**
+## Usage
 
 Once the code is uploaded and the serial monitor is open, the ESP8266 will continuously scan for available WiFi networks. The LEDs will indicate the scanning process and network status:
 - **Green LED:** Indicates scanning process.
 - **Red LED:** Indicates no networks found.
 - **Yellow LED:** Indicates networks found.
 
-######## **Troubleshooting**
+## Troubleshooting
 
 - **Driver Issues:** Ensure you have the correct drivers installed for your ESP8266 board.
 - **Board Selection:** Verify that the board selected in `platformio.ini` matches your actual hardware.
 - **Serial Communication:** Double-check the baud rate and COM port settings in the serial monitor.
 
+## License
 
-########## **Acknowledgments**
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
 
 - Inspired by examples from the Arduino and ESP8266 communities.
